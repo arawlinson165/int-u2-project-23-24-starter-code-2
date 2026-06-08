@@ -21,7 +21,7 @@ h3 {
 /* The code below aligns all the sections horizontally on the bottom. */
 .section-container {
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
 }
 
 /* The code below a solid black border to section and puts space between them (the margin). */
@@ -29,4 +29,8 @@ h3 {
     border: 1px black solid;
     margin: 5px;
     padding: 5px;
+}
+
+body{
+    background-color: lemonchiffon;
 }
