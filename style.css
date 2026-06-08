@@ -11,6 +11,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 3px;
   width:400px;
 }
 
@@ -21,15 +22,17 @@ h3 {
 
 /* The code below aligns all the sections horizontally on the bottom. */
 .section-container {
-    display:flex;
-    justify-content:space-around;
+    display:flexbox;
+    justify-content: flex-start;
 }
 
 /* The code below a solid black border to section and puts space between them (the margin). */
 .section {
-    border: 1px black solid;
-    margin: 5px;
+    width: 450px;
+    border: 1px rgb(0, 0, 181) ridge;
+    margin: 8px;
     padding: 5px;
+    border-radius: 3px;
 }
 
 body{
