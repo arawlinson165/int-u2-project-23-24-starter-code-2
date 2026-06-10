@@ -4,11 +4,12 @@
 <head>
   <title>Website for Change</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
   <div class="navbar">
-    <a href="index.html"><img style="width: 45px; margin: auto;" src="Assets/river-icon.png" class="nav-logo"></a>
+    <a href="index.html"><img src="Assets/river-icon.png" class="nav-logo" alt="River logo"></a>
     <a href="#ohio" class="navbar-icon">Ohio River</a>
     <a href="#pigeon" class="navbar-icon">Pigeon Creek</a>
     <a href="#habitat" class="navbar-icon">Habitat Loss</a>
@@ -19,7 +20,7 @@
   <h1>Ohio River Pollution</h1>
   <br>
   <!-- Change the image below to one you want to use. -->
-  <img style="width: 600px" alt="Boat on Ohio River" src="Assets/boat-on-ohio.webp">
+  <img class="main-image" alt="Boat on Ohio River" src="Assets/boat-on-ohio.webp">
   <h3>The Ohio River, Evansville's major waterway, is very polluted. Find out what areas around Evansville face environmental issues and what you can do to help.</h3>
   <div class="section-container">
     <div class="section" id="ohio">
@@ -28,21 +29,21 @@
         <h2>Ohio River</h2>
         <p>A Superfund site, or place requiring long-term cleanup, exists in Evansville because of an electroplating
           company that released arsenic, lead, and other toxins in the soil and water covering a 4.5-square-mile area.
-          By 2023, more than 4,000 properties had been cleaned as a result (Van Vlear). <br><br>
+          By 2023, more than 4,000 properties had been cleaned as a result (<a href="sources.html#van-vlear">Van Vlear</a>). <br><br>
 
           Evansville continues to face issues from coal ash, which leeches into the river from landfills upstream.
           <br><br>
 
           In Rockport, Indiana, a facility dumped almost 11 million pounds of nitrates into the river, which are linked
           to developmental and birth defects. These pollutants also kill off marine life once they reach the Gulf of
-          Mexico, as the algal blooms they facilitate deplete the water of oxygen (Hampson). <br><br>
+          Mexico, as the algal blooms they facilitate deplete the water of oxygen (<a href="sources.html#hampson">Hampson</a>). <br><br>
 
           Mercury is also present in the Ohio River and causes birth defects and harm to children, reducing brain
           development. While a ban was passed in 2003, the ORSANCO Watershed Organizations Committee has had difficulty
-          forcing companies to uphold it (“Cleaning Up”). <br><br>
+          forcing companies to uphold it (<a href="sources.html#cleaning-up">Cleaning Up</a>). <br><br>
 
           PFAS, or forever chemicals, exist in every fish tested in Kentucky; they are also present in almost all humans
-          (Hampson).
+          (<a href="sources.html#hampson">Hampson</a>).
         </p>
 
       </div>
@@ -58,9 +59,9 @@
           urban development. <br><br>
 
           In 2019, the Vanderburgh County SWCD started an effort to drain 107 acres in polluted areas of Vanderburgh,
-          Warrick, and Gibson counties (“Lower Pigeon Creek”). Additionally, the Evansville Nature Conservancy is using
+          Warrick, and Gibson counties (<a href="sources.html#lower-pigeon">Lower Pigeon Creek</a>). Additionally, the Evansville Nature Conservancy is using
           two-stage ditches to channel fewer pollutants into Pigeon Creek. These use heightened embankments at each side
-          of the creek to stop direct entry of runoff, and are being implemented on public and private land (Shoulders).
+          of the creek to stop direct entry of runoff, and are being implemented on public and private land (<a href="sources.html#shoulders">Shoulders</a>).
           <br><br>
 
           Pigeon Creek faces similar problems to large bodies of water like the Ohio River; it is also affected by
@@ -75,29 +76,29 @@
       <div class="section-text">
         <h2>Habitat Loss</h2>
         <p>Human development has destroyed eighty-five percent of Indiana’s original wetlands and almost all of its
-          native tallgrass prairies (“Habitats”). These prairies once covered almost all of North America, and their
-          biodiversity was only rivaled by the Amazon Rainforest (“Prairies”).<br><br>
+          native tallgrass prairies (<a href="sources.html#habitats">Habitats</a>). These prairies once covered almost all of North America, and their
+          biodiversity was only rivaled by the Amazon Rainforest (<a href="sources.html#prairies">Prairies</a>).<br><br>
 
           Prairies provide food and shelter for birds like bobwhite quail and greater prairie chickens; without at least
           20 acres of grasslands, these species cannot find enough food to survive winters. Greater prairie chickens
-          require 640 acres of land to sustain their population, and none currently exist in Indiana (“Prairies”).
+          require 640 acres of land to sustain their population, and none currently exist in Indiana (<a href="sources.html#prairies">Prairies</a>).
           <br><br>
 
           To combat habitat loss, landowners can repurpose parts of their land for prairie grasses. Any area with
-          primarily grasses and wildflowers can harbor wildlife, especially migratory birds (“Prairies”).
+          primarily grasses and wildflowers can harbor wildlife, especially migratory birds (<a href="sources.html#prairies">Prairies</a>).
         </p>
       </div>
     </div>
 
     <div class="section" id="wetland">
-      <img alt="Howell Wetlands" title="Howell Wetlands" src="Assets/howell-wetlands.webp " class="section-image">
+      <img alt="Howell Wetlands" title="Howell Wetlands" src="Assets/howell-wetlands.webp" class="section-image">
       <div class="section-text">
         <h2>Wetland Preservation</h2>
         <p>Though Indiana’s wetlands once covered around twenty-five percent of the state, most were drained for
           agriculture and development. <br><br>
 
           Wetlands are important because they hold very large amounts of water, which they filter, in addition to
-          storing carbon. They are also home to many endangered species (Vigue).</p>
+          storing carbon. They are also home to many endangered species (<a href="sources.html#vigue">Vigue</a>).</p>
       </div>
     </div>
     <div class="section" id="note">
@@ -109,6 +110,17 @@
 
     </div>
     <p class="bottom-bar">Copyright 2026 Alex Rawlinson (Sample)</p>
+
+  <script>
+    (function() {
+      const nav = document.querySelector('.navbar');
+      const threshold = 60;
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > threshold) nav.classList.add('navbar--small');
+        else nav.classList.remove('navbar--small');
+      });
+    })();
+  </script>
 
 </body>
 
