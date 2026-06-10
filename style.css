@@ -1,11 +1,9 @@
-/* The code below centers the text of all h1's on the page. */
-
 /*makes it scroll nicely*/
 html{
     scroll-behavior: smooth;
 }
 
-
+/*center header and make divider*/
 h1 {
     text-align: center;
     border-bottom: 5px dashed rgb(0, 0, 255);
@@ -14,42 +12,35 @@ h1 {
 
 }
 
-.animation-box {
-    width: 400px;
-    padding: auto;
-    background-color: white;
-    cursor: pointer;
-
-
-}
-
-img:hover {
-    scale: 1.05;
-    transition-duration: 0.1s;
-}
-
-/* The code below centers all images on the page and gives them a width of 400px. */
+/*set margins to auto, put on left (block), and allow shrink*/
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 3px;
-    width: 400px;
+    /*width: 400px; */
+    flex: 0 1 400px;
 }
 
-/* The code below centers the text of all h2's on the page. */
+/*make it bigger when you hover cursor*/
+img:hover {
+    scale: 1.05;
+    transition-duration: 0.1s;
+}
+
+/* The code below centers the text of all h3's on the page. */
 h3 {
     text-align: center;
 }
 
-/* The code below aligns all the sections horizontally on the bottom. */
+/*align sections left and allow wrap*/
 .section-container {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-/* The code below a solid black border to section and puts space between them (the margin). */
+/*format sections and allow side by side items within*/
 .section {
     border: 1px rgb(0, 0, 255) dotted;
     padding: 8px;
@@ -60,20 +51,24 @@ h3 {
     align-items: center;
 }
 
+/*class for images for side by side elements*/
 .section-image {
     width: 400px;
     margin-right: 20px;
 }
 
+/*text class so it can go next to images*/
 .section-text {
-    flex: 1;
+    flex: 1 1;
 }
 
+/*set background to ugly beige and Apple font :^| */
 body {
     background-color: rgb(255, 250, 212);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/*navbar with flex icons tried to make static but DID NOT WORK*/
 .navbar {
     display: flex;
     justify-content: flex-start;
@@ -86,6 +81,7 @@ body {
     position: sticky;
 }
 
+/*make icons clickable and format correctly*/
 .navbar-icon {
     display: flex;
     justify-content: flex-start;
@@ -99,21 +95,25 @@ body {
     border-radius: 8px;
 }
 
+/*make navbar icon big on hover*/
 .navbar-icon:hover {
     scale: 1.05;
     transition-duration: 0.1s;
 }
 
+/*make hyperlinks look like normal text*/
 a {
     color: black;
     text-decoration: none;
     font-size: auto;
 }
 
+/*make it bold DOES NOT WORK*/
 a :hover {
     font-weight: bolder;
 }
 
+/*format bottom bar*/
 .bottom-bar {
     display: block;
     text-align: center;
